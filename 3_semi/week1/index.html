@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="display">ここに何か表示される</div>
+    <button id="button">クリック！</button>
+    
+    <script>
+    // html要素を取得
+    const Display=document.getElementById("display")
+    const Button =document.getElementById("button")
+    
+    // クリックしたら表示
+    Button.onclick=function(){
+        Display.textContent="クリックした！"
+    }
+    
+    </script>
+</body>
+</html>
