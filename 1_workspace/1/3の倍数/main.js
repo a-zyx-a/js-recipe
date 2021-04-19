@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
+const display = document.getElementById("display")
+const button = document.getElementById("button")
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MultipleOfThree</title>
-</head>
+let count = 0
 
-<body>
-  <script src="main.js"></script>
-</body>
+const countUp = function() {
+  // count を更新
+  count += 1
+  // count を秒単位にして表示
+  display.textContent = count / 100
+}
 
-</html>
+button.onclick = function() {
+  // 10ms ごとに countUp を実行するように登録する
+  setInterval(countUp, 10)
+  button.textContent = "stop"
+}
